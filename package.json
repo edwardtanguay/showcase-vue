@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "gh": "git log --pretty=format:\"%ad | %h | %s\" --date=format:\"%Y-%m-%d %H:%M:%S\"",
+    "backup": "bash -c 'git archive --format=zip HEAD -o \"../BACKUP/showcase-vue-$(date +%F-%H-%M-%S).zip\"'"
   },
   "dependencies": {
     "vue": "^3.5.24"
